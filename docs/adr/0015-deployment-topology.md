@@ -23,4 +23,3 @@ No Docker artifacts or `deploy/` directory are needed in v1.
 ## Alternatives Considered
 
 Docker Compose with nginx was rejected because no runtime API is needed.
-

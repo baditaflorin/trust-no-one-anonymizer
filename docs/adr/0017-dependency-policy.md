@@ -29,4 +29,3 @@ Security updates must be monitored manually because there is no CI workflow.
 ## Alternatives Considered
 
 Custom face tracking, custom denoising, and custom WebRTC wrappers were rejected because established browser APIs and libraries exist.
-

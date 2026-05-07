@@ -21,4 +21,3 @@ Users get clear degradation instead of a blank app. Tests can assert error conve
 ## Alternatives Considered
 
 Letting exceptions bubble to a global handler was rejected because media apps need partial recovery.
-

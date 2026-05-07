@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+set -eu
+
+if [ -f package-lock.json ]; then
+  echo "Checkout complete. Run npm install if dependencies changed."
+fi
+

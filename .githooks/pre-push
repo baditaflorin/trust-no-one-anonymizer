@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+set -eu
+
+make test
+make build
+test -s docs/index.html
+grep -q '<div id="app"></div>' docs/index.html
+make smoke
+

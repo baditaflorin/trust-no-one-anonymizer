@@ -27,4 +27,3 @@ Build output and project documentation share the `docs/` directory, so the build
 A `gh-pages` branch was rejected because it separates source and published artifacts.
 
 Publishing from repository root was rejected because Vite build output would clutter the source root.
-

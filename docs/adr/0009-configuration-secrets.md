@@ -21,4 +21,3 @@ The app can be forked and deployed without secret provisioning. API rate limits 
 ## Alternatives Considered
 
 Encrypted frontend secrets were rejected because client-side encryption does not protect a secret distributed with the app.
-

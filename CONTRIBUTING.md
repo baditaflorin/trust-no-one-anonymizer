@@ -12,4 +12,3 @@ Thank you for helping improve Trust No One Anonymizer.
 ## Security-Sensitive Changes
 
 This project handles camera and microphone streams. Keep all raw media client-side, avoid telemetry by default, and document privacy-impacting changes in an ADR before implementation.
-

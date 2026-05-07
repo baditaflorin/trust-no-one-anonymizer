@@ -33,4 +33,3 @@ The app relies on public CDNs for MediaPipe runtime/model loading in v1. If a CD
 Committing the MediaPipe model to the repository was rejected because large binary model files would bloat history.
 
 A backend model proxy was rejected because it would add infrastructure without increasing privacy.
-

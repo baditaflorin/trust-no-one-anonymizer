@@ -25,4 +25,3 @@ The team must keep DOM state management disciplined because there is no componen
 React was rejected for v1 because it adds payload and indirection without enough UI complexity to justify it.
 
 Svelte was considered but rejected because plain TypeScript is sufficient for this single-screen app.
-

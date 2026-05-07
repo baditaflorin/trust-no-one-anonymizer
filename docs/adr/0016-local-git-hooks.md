@@ -26,4 +26,3 @@ Checks run before code leaves the machine. Contributors need local Node tooling 
 ## Alternatives Considered
 
 Lefthook was rejected because plain hooks are transparent and enough for v1.
-

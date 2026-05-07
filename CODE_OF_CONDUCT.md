@@ -13,4 +13,3 @@ Use welcoming language, respect differing viewpoints, accept constructive critic
 ## Enforcement
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to florin@badita.ro.
-

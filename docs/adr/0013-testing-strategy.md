@@ -25,4 +25,3 @@ Logic regressions and Pages build breakage are caught locally.
 ## Alternatives Considered
 
 GitHub Actions was rejected because the project explicitly uses local hooks instead of CI.
-

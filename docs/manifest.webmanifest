@@ -1,0 +1,18 @@
+{
+  "name": "Trust No One Anonymizer",
+  "short_name": "Anonymizer",
+  "description": "Client-side face and voice anonymization for browser video calls.",
+  "start_url": "/trust-no-one-anonymizer/",
+  "scope": "/trust-no-one-anonymizer/",
+  "display": "standalone",
+  "background_color": "#101820",
+  "theme_color": "#101820",
+  "icons": [
+    {
+      "src": "/trust-no-one-anonymizer/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

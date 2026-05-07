@@ -33,4 +33,3 @@ The UI can degrade gracefully if a heavy module fails to initialize.
 A single media controller was rejected because it would make privacy review harder.
 
 A full routing structure was rejected for v1 because the product is a single interactive tool.
-

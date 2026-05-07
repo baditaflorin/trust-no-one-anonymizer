@@ -21,4 +21,3 @@ There is no product usage telemetry. Success must be measured through local test
 ## Alternatives Considered
 
 Plausible and a Cloudflare Worker beacon were rejected for v1 because usage insight is less important than minimizing metadata collection.
-

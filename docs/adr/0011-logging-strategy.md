@@ -23,4 +23,3 @@ Debugging production issues may require users to reproduce with dev builds.
 ## Alternatives Considered
 
 Remote logging was rejected because it would introduce telemetry and a server dependency.
-

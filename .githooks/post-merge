@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+set -eu
+
+if [ -f package-lock.json ]; then
+  echo "Dependencies may have changed. Run npm install if package-lock.json moved."
+fi
+

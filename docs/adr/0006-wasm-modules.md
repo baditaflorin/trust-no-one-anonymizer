@@ -27,4 +27,3 @@ Some advanced acceleration paths may be unavailable on browsers without WebGPU/W
 Self-hosting all WASM assets was rejected for v1 to keep the repository lean.
 
 A Docker backend for model inference was rejected because raw media would need to leave the browser or a server would need access to sensitive intermediate representations.
-

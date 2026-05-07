@@ -25,4 +25,3 @@ Future larger model caching may use Cache Storage through the service worker, bu
 IndexedDB was rejected for v1 because the app has no large user-owned artifacts.
 
 Server persistence was rejected because it conflicts with the privacy model.
-

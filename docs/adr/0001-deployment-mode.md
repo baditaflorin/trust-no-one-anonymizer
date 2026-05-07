@@ -29,4 +29,3 @@ GitHub Pages cannot set custom COOP/COEP headers, so WASM dependencies must work
 Mode B was rejected because no offline data generation pipeline is needed for v1.
 
 Mode C was rejected because a runtime API is unnecessary and would weaken the trust story unless future requirements add hosted signaling, shared rooms, identity, or cross-device sync.
-
