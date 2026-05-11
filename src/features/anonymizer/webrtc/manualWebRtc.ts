@@ -1,4 +1,5 @@
 import { errorMessage } from '../../../shared/result';
+import { fetchIceServers, STUN_SERVERS } from './turnConfig';
 
 export interface ManualSignal {
   type: RTCSdpType;
@@ -16,7 +17,7 @@ export class ManualWebRtcSession {
   constructor(private readonly events: WebRtcSessionEvents) {}
 
   async createOffer(localStream: MediaStream, usePublicStun: boolean): Promise<string> {
-    const peer = this.createPeer(usePublicStun);
+    const peer = await this.createPeer(usePublicStun);
     localStream.getTracks().forEach((track) => peer.addTrack(track, localStream));
     const offer = await peer.createOffer({
       offerToReceiveAudio: true,
@@ -32,7 +33,7 @@ export class ManualWebRtcSession {
     localStream: MediaStream,
     usePublicStun: boolean,
   ): Promise<string> {
-    const peer = this.createPeer(usePublicStun);
+    const peer = await this.createPeer(usePublicStun);
     localStream.getTracks().forEach((track) => peer.addTrack(track, localStream));
     await peer.setRemoteDescription(decodeSignal(offerText));
     const answer = await peer.createAnswer();
@@ -52,11 +53,15 @@ export class ManualWebRtcSession {
     this.events.onState('closed');
   }
 
-  private createPeer(usePublicStun: boolean): RTCPeerConnection {
+  private async createPeer(usePublicStun: boolean): Promise<RTCPeerConnection> {
     this.close();
-    this.peer = new RTCPeerConnection({
-      iceServers: usePublicStun ? [{ urls: 'stun:stun.l.google.com:19302' }] : [],
-    });
+    // When the user opts in to public STUN, also fetch HMAC TURN credentials
+    // so the SDP we hand them to copy/paste includes relay candidates. Without
+    // this, two peers behind symmetric NAT (very common — mobile carriers,
+    // corporate firewalls) cannot complete a call no matter how many times
+    // they re-exchange the SDP.
+    const iceServers = usePublicStun ? await fetchIceServers() : [];
+    this.peer = new RTCPeerConnection({ iceServers });
     this.peer.ontrack = (event) => {
       const [stream] = event.streams;
       if (stream) this.events.onRemoteStream(stream);
